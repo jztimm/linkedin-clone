@@ -6,9 +6,17 @@ const Header = (props) => {
             <Content>
                 <Logo>
                     <a href="/home">
-                        <img src="/images/home-logo.svg" alt="" />
+                        <img src="/images/home-logo.svg" alt="LinkedIn Home Icon" />
                     </a>
                 </Logo>
+                <Search>
+                    <div>
+                        <input type="text" placeholder="Search" />
+                    </div>
+                    <SearchIcon>
+                        <img src="/images/search-icon.svg" alt="Search Icon" />
+                    </SearchIcon>
+                </Search>
             </Content>
         </Container>
     )
@@ -36,6 +44,45 @@ const Content = styled.div`
 const Logo = styled.span`
     margin-right: 8px;
     font-size: 0px;
+`;
+
+const Search = styled.div`
+    opacity: 1;
+    flex-grow: 1;
+    position: relative;
+    & > div {
+        max-width: 280px;
+        input {
+            border: none;
+            box-shadow: none;
+            background-color: #eef3f8;
+            border-radius: 2px;
+            color: rgba(0, 0, 0, 0.9);
+            width: 218px;
+            padding: 0 8px 0 40px;
+            line-height: 1.75;
+            font-weight: 400px;
+            font-size: 14px;
+            height: 34px;
+            border-color: #dce6f1; //Not working (Black instead of Blue)
+            vertical-align: text-top;
+        }
+
+    }
+`;
+
+const SearchIcon = styled.div`
+    width: 40px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 2px;
+    border-radius: 0 2px 2px 0;
+    margin: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export default Header;
