@@ -17,6 +17,15 @@ const Header = (props) => {
                         <img src="/images/search-icon.svg" alt="Search Icon" />
                     </SearchIcon>
                 </Search>
+                <Nav>
+                    <NavListWrap>
+                        <NavList>
+                            <a>
+                                <img src="/images/nav-home-logo.svg" alt="" />
+                            </a>
+                        </NavList>
+                    </NavListWrap>
+                </Nav>
             </Content>
         </Container>
     )
@@ -84,5 +93,21 @@ const SearchIcon = styled.div`
     justify-content: center;
     align-items: center;
 `;
+
+const Nav = styled.nav`
+    margin-left: auto;
+    display: block;
+    @media (max-width: 768px) {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background: white;
+        width: 100%;
+    }
+`;
+
+const NavListWrap = styled.ul``;
+
+const NavList = styled.li``;
 
 export default Header;
