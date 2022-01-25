@@ -6,8 +6,10 @@ const Rightside = (props) => {
             Rightside
         </Container>
     )
-}
+};
 
-const Container = styled.div``;
+const Container = styled.div`
+    grid-area: Rightside;
+`;
 
 export default Rightside;
